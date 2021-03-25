@@ -1,0 +1,13 @@
+int LED=3;//as weconnected LED ANODE to Digital pin 3
+int POT= A5;// we connected POT to analog pin A5
+void setup()
+{
+  pinMode(LED, OUTPUT); //pin 3 is output here.
+}
+
+void loop()
+{
+  int POT_value=analogRead(POT);// reading the value from potentiometer
+  int brightnes= POT_value/4;
+  analogWrite(LED,brightnes);//value at pin 3
+}
